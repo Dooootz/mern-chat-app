@@ -9,14 +9,16 @@ const rooms = ['general', 'tech', 'finance', 'crypto'];
 const cors = require('cors');
 
 // pass data as urlEncoded & JSON data 
-app.use(express.urlencoded({extended: ture}));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 // cors allows the front & backend to communicate 
 app.use(cors());
 
-
+// create the server 
 const server = require('http').createServer(app);
+// instantiate PORT num
 const PORT = 5001;
+// allow the server to handle sockets 
 const io = require('socket.io')(server, {
     cors: {
         origin: 'http://localhost:3000',
@@ -26,5 +28,5 @@ const io = require('socket.io')(server, {
 
 
 server.listen(PORT, () => {
-    console.log('ITS ALIVE!!!' , PORT)
+    console.log('ITS ALIVE!!! Port', PORT)
 }) 
