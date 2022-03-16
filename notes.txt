@@ -1,1 +1,4 @@
 Checkpoint@ 25:24
+
+Lets pause this tut 
+Looks like we've found a more engaging video to follow = JS mastery 
